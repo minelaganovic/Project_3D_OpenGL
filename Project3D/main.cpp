@@ -262,14 +262,14 @@ void drawCanteen(){
     glPushMatrix();
     glTranslatef(-15,0,-20 );
     glBegin(GL_QUADS);
-    //zid back
+    //back
     glColor3f(0.24f, 0.14f, 0.05f);
     glVertex3f(0.0f, 19.8f, 0.0f);
     glVertex3f(0.0f, 0.0f, 0.0f);
     glVertex3f(30.0f, 0.0f, 0.0f);
     glVertex3f(30.0f, 19.8f, 0.0f);
 
-    //zid front
+    // front
     glColor3f(0.8f, 0.65f, 0.44f);
     glVertex3f(0.0f, 13.0f, 10.0f);
     glVertex3f(0.0f, 8.0f, 10.0f);
@@ -284,13 +284,13 @@ void drawCanteen(){
     glVertex3f(30.0f, 0.0f, 10.0f);
     glVertex3f(30.0f,8.0f, 10.0f);
 
-    //left zid
+    //left
     glVertex3f(0.0f, 20.0f, 0.0f);
     glVertex3f(0.0f, 0.0f, 0.0f);
     glVertex3f(0.0f, 0.0f, 10.0f);
     glVertex3f(0.0f,13.0f, 10.0f);
 
-    //right zid
+    //right
     glVertex3f(30.0f, 20.0f, 0.0f);
     glVertex3f(30.0f, 13.0f, 10.0f);
     glVertex3f(30.0f, 0.0f, 10.0f);
@@ -418,8 +418,7 @@ void drawBarTableTop(){
     glPopMatrix();
 }
 void drawRoof(){
-    //krov
-
+   
     glPushMatrix();
     glTranslatef(-15,0,-20 );
     glColor3f(1,0,0);
@@ -491,7 +490,7 @@ void display() {
         glEnable(GL_TEXTURE_2D);
         glBindTexture(GL_TEXTURE_2D,texture2);
         glBegin(GL_POLYGON);
-        //text putaa
+        //text1
         glColor3f(0.7,0.7,0.6);
           glTexCoord2f(0.0, 0.0); glVertex3f(-4.0f, 0.1f, -10.0f);
           glTexCoord2f(0.0, 2.0); glVertex3f(2.0f, 0.1f, -10.0f);
@@ -570,7 +569,7 @@ GLuint LoadTexture(const char* filename, int width, int height){
        return texture;
 }
 void changeSize(GLsizei w, GLsizei h){
-	glViewport(0, 0, w, h);
+    glViewport(0, 0, w, h);
     GLfloat aspect_ratio = h == 0 ? w/1 : (GLfloat)w/(GLfloat)h;
     glMatrixMode(GL_PROJECTION);
     glLoadIdentity();
